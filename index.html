@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图库</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0d0818; color:#e0e0e0; font-family:'Segoe UI','Microsoft YaHei',sans-serif; }
+  .wrap { max-width:1200px; margin:0 auto; padding:20px; }
+  h1 { font-size:18px; color:#A855F7; letter-spacing:2px; margin-bottom:20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:14px; }
+  .item { background:#1a1030; border:1px solid #3b1f6e; border-radius:8px; overflow:hidden; text-decoration:none; color:#888; transition:border-color .2s; display:block; }
+  .item:hover { border-color:#A855F7; }
+  .item img { width:100%; aspect-ratio:9/16; object-fit:cover; display:block; background:#2a1a4e; }
+  .item .name { padding:6px 8px; font-size:11px; word-break:break-all; }
+  .empty, .loading { text-align:center; padding:60px; color:#888; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>图片存储库</h1>
+  <div id="grid" class="grid"><div class="loading">加载中…</div></div>
+</div>
+<script>
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+fetch('manifest.json?t=' + Date.now())
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(data => {
+    const list = (data.images || []).slice().reverse();
+    const grid = document.getElementById('grid');
+    if (!list.length) { grid.innerHTML = '<div class="empty">暂无图片</div>'; return; }
+    grid.innerHTML = list.map(im => `
+      <a class="item" href="${esc(im.path)}" download title="点击下载 ${esc(im.name)}">
+        <img src="${esc(im.path)}" alt="${esc(im.name)}" loading="lazy" decoding="async">
+        <div class="name">${esc(im.name)}</div>
+      </a>`).join('');
+  })
+  .catch(() => { document.getElementById('grid').innerHTML = '<div class="empty">加载失败，请刷新重试</div>'; });
+</script>
+</body>
+</html>
