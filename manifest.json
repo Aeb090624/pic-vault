@@ -1,1 +1,88 @@
-{"images": []}
+{
+  "images": [
+    {
+      "id": "img_01_asuka_red_ai",
+      "path": "images/01_asuka_red_ai.png",
+      "name": "01_asuka_red_ai.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_02_asuka_newspaper_lie",
+      "path": "images/02_asuka_newspaper_lie.png",
+      "name": "02_asuka_newspaper_lie.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_03_asuka_newspaper_stand",
+      "path": "images/03_asuka_newspaper_stand.png",
+      "name": "03_asuka_newspaper_stand.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_04_rei_longhair_ai",
+      "path": "images/04_rei_longhair_ai.png",
+      "name": "04_rei_longhair_ai.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_05_rei_street_can",
+      "path": "images/05_rei_street_can.jpg",
+      "name": "05_rei_street_can.jpg",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_06_rei_short_plugsuit",
+      "path": "images/06_rei_short_plugsuit.png",
+      "name": "06_rei_short_plugsuit.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_07_rei_redblack_check",
+      "path": "images/07_rei_redblack_check.jpg",
+      "name": "07_rei_redblack_check.jpg",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_08_kaworu_purple_plugsuit",
+      "path": "images/08_kaworu_purple_plugsuit.png",
+      "name": "08_kaworu_purple_plugsuit.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_09_kaworu_black_jacket",
+      "path": "images/09_kaworu_black_jacket.png",
+      "name": "09_kaworu_black_jacket.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_10_kaworu_pink_invert",
+      "path": "images/10_kaworu_pink_invert.png",
+      "name": "10_kaworu_pink_invert.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_11_shinji_blue_plugsuit",
+      "path": "images/11_shinji_blue_plugsuit.jpg",
+      "name": "11_shinji_blue_plugsuit.jpg",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_12_shinji_white_ai",
+      "path": "images/12_shinji_white_ai.jpg",
+      "name": "12_shinji_white_ai.jpg",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_13_mari_pink_ai",
+      "path": "images/13_mari_pink_ai.png",
+      "name": "13_mari_pink_ai.png",
+      "time": "2026-10-05T08:23:32Z"
+    },
+    {
+      "id": "img_14_mari_push_glasses",
+      "path": "images/14_mari_push_glasses.png",
+      "name": "14_mari_push_glasses.png",
+      "time": "2026-10-05T08:23:32Z"
+    }
+  ]
+}
