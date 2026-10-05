@@ -1,13 +1,6 @@
 {
   "images": [
     {
-      "id": "img_01_asuka_red_ai",
-      "path": "images/01_asuka_red_ai.png",
-      "name": "01_asuka_red_ai.png",
-      "thumb": "images/thumbs/01_asuka_red_ai.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
       "id": "img_02_asuka_newspaper_lie",
       "path": "images/02_asuka_newspaper_lie.png",
       "name": "02_asuka_newspaper_lie.png",
@@ -19,13 +12,6 @@
       "path": "images/03_asuka_newspaper_stand.png",
       "name": "03_asuka_newspaper_stand.png",
       "thumb": "images/thumbs/03_asuka_newspaper_stand.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
-      "id": "img_04_rei_longhair_ai",
-      "path": "images/04_rei_longhair_ai.png",
-      "name": "04_rei_longhair_ai.png",
-      "thumb": "images/thumbs/04_rei_longhair_ai.jpg",
       "time": "2026-10-05T08:37:40Z"
     },
     {
@@ -78,31 +64,10 @@
       "time": "2026-10-05T08:37:40Z"
     },
     {
-      "id": "img_12_shinji_white_ai",
-      "path": "images/12_shinji_white_ai.jpg",
-      "name": "12_shinji_white_ai.jpg",
-      "thumb": "images/thumbs/12_shinji_white_ai.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
-      "id": "img_13_mari_pink_ai",
-      "path": "images/13_mari_pink_ai.png",
-      "name": "13_mari_pink_ai.png",
-      "thumb": "images/thumbs/13_mari_pink_ai.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
       "id": "img_14_mari_push_glasses",
       "path": "images/14_mari_push_glasses.png",
       "name": "14_mari_push_glasses.png",
       "thumb": "images/thumbs/14_mari_push_glasses.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
-      "id": "img_15_asuka_white_plugsuit_ai",
-      "path": "images/15_asuka_white_plugsuit_ai.png",
-      "name": "15_asuka_white_plugsuit_ai.png",
-      "thumb": "images/thumbs/15_asuka_white_plugsuit_ai.jpg",
       "time": "2026-10-05T08:37:40Z"
     },
     {
@@ -169,13 +134,6 @@
       "time": "2026-10-05T08:37:40Z"
     },
     {
-      "id": "img_25_shinji_blue_profile",
-      "path": "images/25_shinji_blue_profile.png",
-      "name": "25_shinji_blue_profile.png",
-      "thumb": "images/thumbs/25_shinji_blue_profile.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
       "id": "img_26_shinji_cockpit",
       "path": "images/26_shinji_cockpit.png",
       "name": "26_shinji_cockpit.png",
@@ -187,13 +145,6 @@
       "path": "images/27_mari_pink_suit.png",
       "name": "27_mari_pink_suit.png",
       "thumb": "images/thumbs/27_mari_pink_suit.jpg",
-      "time": "2026-10-05T08:37:40Z"
-    },
-    {
-      "id": "img_28_mari_red_lance",
-      "path": "images/28_mari_red_lance.jpg",
-      "name": "28_mari_red_lance.jpg",
-      "thumb": "images/thumbs/28_mari_red_lance.jpg",
       "time": "2026-10-05T08:37:40Z"
     },
     {
