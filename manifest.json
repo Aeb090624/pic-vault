@@ -426,6 +426,62 @@
       "name": "68_asuka_rei_hoodie.png",
       "thumb": "images/thumbs/68_asuka_rei_hoodie.jpg",
       "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_69_asuka_neon_rain2",
+      "path": "images/69_asuka_neon_rain2.png",
+      "name": "69_asuka_neon_rain2.png",
+      "thumb": "images/thumbs/69_asuka_neon_rain2.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_70_asuka_rain_face",
+      "path": "images/70_asuka_rain_face.png",
+      "name": "70_asuka_rain_face.png",
+      "thumb": "images/thumbs/70_asuka_rain_face.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_71_asuka_white_suit",
+      "path": "images/71_asuka_white_suit.png",
+      "name": "71_asuka_white_suit.png",
+      "thumb": "images/thumbs/71_asuka_white_suit.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_72_asuka_city_cyber",
+      "path": "images/72_asuka_city_cyber.png",
+      "name": "72_asuka_city_cyber.png",
+      "thumb": "images/thumbs/72_asuka_city_cyber.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_73_rei_earth",
+      "path": "images/73_rei_earth.png",
+      "name": "73_rei_earth.png",
+      "thumb": "images/thumbs/73_rei_earth.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_74_rei_moon_uniform",
+      "path": "images/74_rei_moon_uniform.png",
+      "name": "74_rei_moon_uniform.png",
+      "thumb": "images/thumbs/74_rei_moon_uniform.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_75_rei_red_water",
+      "path": "images/75_rei_red_water.jpg",
+      "name": "75_rei_red_water.jpg",
+      "thumb": "images/thumbs/75_rei_red_water.jpg",
+      "time": "2026-10-05T09:38:17Z"
+    },
+    {
+      "id": "img_76_mari_pink_suit",
+      "path": "images/76_mari_pink_suit.png",
+      "name": "76_mari_pink_suit.png",
+      "thumb": "images/thumbs/76_mari_pink_suit.jpg",
+      "time": "2026-10-05T09:38:17Z"
     }
   ]
 }
