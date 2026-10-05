@@ -64,6 +64,13 @@
   .toast.active { display:block; }
   .toast.success { border-color:#00ff88; color:#00ff88; }
   .toast.error { border-color:var(--red); color:var(--red); }
+  /* 下载进度条 */
+  .dl-progress { position:fixed; bottom:0; left:0; right:0; z-index:600; background:rgba(10,10,15,.95); padding:16px 20px; border-top:1px solid var(--blue); display:none; }
+  .dl-progress.active { display:block; }
+  .dl-progress .dl-info { display:flex; justify-content:space-between; font-size:13px; margin-bottom:8px; }
+  .dl-progress .dl-info b { color:var(--blue); }
+  .dl-progress .dl-bar { height:6px; background:var(--panel); border-radius:3px; overflow:hidden; }
+  .dl-progress .dl-fill { height:100%; background:var(--blue); width:0%; transition:width .2s ease-out; border-radius:3px; }
   @media (max-width:600px) { .grid { grid-template-columns:repeat(2,1fr); gap:10px; } .wrap { padding:12px; } }
 </style>
 </head>
@@ -110,6 +117,15 @@
 </div>
 
 <div class="toast" id="toast"></div>
+
+<!-- 下载进度条 -->
+<div class="dl-progress" id="dlProgress">
+  <div class="dl-info">
+    <span>正在下载图片…</span>
+    <span><b id="dlCount">0</b> / <span id="dlTotal">0</span> 张（<span id="dlPct">0</span>%）</span>
+  </div>
+  <div class="dl-bar"><div class="dl-fill" id="dlFill"></div></div>
+</div>
 
 <script>
 const OWNER='Aeb090624', REPO='pic-vault', BRANCH='main';
@@ -276,32 +292,53 @@ function saveToken(){
   enterSelectMode('delete');
 }
 
-// ===== 批量下载 =====
+// ===== 批量下载（并行3 + 进度条） =====
 async function batchDownload(){
   if(state.downloading) return;
   const ids=Array.from(state.selectedIds);
   if(!ids.length){ showToast('请先勾选要下载的图片','error'); return; }
   const toDl=state.images.filter(i=>ids.includes(i.id));
   state.downloading=true;
-  showToast('开始下载 '+toDl.length+' 张…');
-  let ok=0, fail=0;
-  for(let i=0;i<toDl.length;i++){
-    const im=toDl[i];
-    try {
-      const res=await fetchWithTimeout(im.path+'?t='+Date.now(), {}, 60000);
-      if(!res.ok) throw new Error('fetch fail');
-      const blob=await res.blob();
-      const url=URL.createObjectURL(blob);
-      const a=document.createElement('a');
-      a.href=url; a.download=im.name||('img_'+i+'.jpg');
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(()=>URL.revokeObjectURL(url), 5000);
-      ok++;
-      showToast('下载中 '+(i+1)+'/'+toDl.length, 'success');
-    } catch(e){ fail++; }
-    await new Promise(r=>setTimeout(r, 400));
-  }
+  // 显示进度条
+  const pg=document.getElementById('dlProgress');
+  document.getElementById('dlTotal').textContent=toDl.length;
+  document.getElementById('dlCount').textContent='0';
+  document.getElementById('dlPct').textContent='0';
+  document.getElementById('dlFill').style.width='0%';
+  pg.classList.add('active');
+  let done=0, ok=0, fail=0;
+  const updateBar=()=>{
+    done++;
+    document.getElementById('dlCount').textContent=done;
+    const pct=Math.round(done/toDl.length*100);
+    document.getElementById('dlPct').textContent=pct;
+    document.getElementById('dlFill').style.width=pct+'%';
+  };
+  // 并行下载 3 个
+  const concurrency=3;
+  let idx=0;
+  const workers=Array(Math.min(concurrency,toDl.length)).fill(0).map(async()=>{
+    while(idx<toDl.length){
+      const i=idx++;
+      const im=toDl[i];
+      try {
+        const res=await fetchWithTimeout(im.path+'?t='+Date.now(), {}, 60000);
+        if(!res.ok) throw new Error('fetch fail');
+        const blob=await res.blob();
+        const url=URL.createObjectURL(blob);
+        const a=document.createElement('a');
+        a.href=url; a.download=im.name||('img_'+i+'.jpg');
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(()=>URL.revokeObjectURL(url), 5000);
+        ok++;
+      } catch(e){ fail++; }
+      updateBar();
+      await new Promise(r=>setTimeout(r, 300));
+    }
+  });
+  await Promise.all(workers);
   state.downloading=false;
+  setTimeout(()=>pg.classList.remove('active'), 1500);
   showToast(fail>0 ? '完成 '+ok+' 张，失败 '+fail+' 张' : '已下载 '+ok+' 张', fail>0?'error':'success');
   exitSelectMode();
 }
