@@ -370,6 +370,62 @@
       "name": "60_rei_moon.jpg",
       "thumb": "images/thumbs/60_rei_moon.jpg",
       "time": "2026-10-05T09:15:25Z"
+    },
+    {
+      "id": "img_61_asuka_rei_moto2",
+      "path": "images/61_asuka_rei_moto2.png",
+      "name": "61_asuka_rei_moto2.png",
+      "thumb": "images/thumbs/61_asuka_rei_moto2.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_62_rei_asuka_mika",
+      "path": "images/62_rei_asuka_mika.png",
+      "name": "62_rei_asuka_mika.png",
+      "thumb": "images/thumbs/62_rei_asuka_mika.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_63_kaworu_shinji_fight",
+      "path": "images/63_kaworu_shinji_fight.png",
+      "name": "63_kaworu_shinji_fight.png",
+      "thumb": "images/thumbs/63_kaworu_shinji_fight.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_64_kaworu_shinji_white",
+      "path": "images/64_kaworu_shinji_white.png",
+      "name": "64_kaworu_shinji_white.png",
+      "thumb": "images/thumbs/64_kaworu_shinji_white.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_65_kaworu_shinji_classic",
+      "path": "images/65_kaworu_shinji_classic.png",
+      "name": "65_kaworu_shinji_classic.png",
+      "thumb": "images/thumbs/65_kaworu_shinji_classic.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_66_asuka_rei_fire",
+      "path": "images/66_asuka_rei_fire.jpg",
+      "name": "66_asuka_rei_fire.jpg",
+      "thumb": "images/thumbs/66_asuka_rei_fire.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_67_asuka_rei_lightning",
+      "path": "images/67_asuka_rei_lightning.jpg",
+      "name": "67_asuka_rei_lightning.jpg",
+      "thumb": "images/thumbs/67_asuka_rei_lightning.jpg",
+      "time": "2026-10-05T09:24:10Z"
+    },
+    {
+      "id": "img_68_asuka_rei_hoodie",
+      "path": "images/68_asuka_rei_hoodie.png",
+      "name": "68_asuka_rei_hoodie.png",
+      "thumb": "images/thumbs/68_asuka_rei_hoodie.jpg",
+      "time": "2026-10-05T09:24:10Z"
     }
   ]
 }
