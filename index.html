@@ -143,7 +143,7 @@ function render(){
     const sel=state.selectedIds.has(id);
     return '<div class="item" data-id="'+id+'" onclick="onCardClick(\''+id+'\','+idx+',this)">'
       +'<div class="check '+(sel?'checked':'')+'">'+(sel?'✓':'')+'</div>'
-      +'<img src="'+esc(im.path)+'" alt="'+esc(im.name)+'" loading="lazy" decoding="async">'
+      +'<img src="'+esc(im.thumb||im.path)+'" alt="'+esc(im.name)+'" loading="lazy" decoding="async">'
       +'<div class="name">'+esc(im.name)+'</div>'
       +'</div>';
   }).join('');
